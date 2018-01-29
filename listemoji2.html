@@ -12,7 +12,7 @@
       user-select: none;
     }
     ul.emoji-list li {
-      font-size: 36px;
+      font-size: 16px;
       float: left;
       display: inline-block;
       padding: 2px;
@@ -924,6 +924,11 @@
       document.getElementsByTagName('img'),
       /\b(?:Mac |i)OS\b/i.test(navigator.userAgent) ? 'Command' : 'Ctrl'
     ));
+      var els = document.getElementsByTagName('img');
+for (var i=0; i < els.length; i++) {
+    els[i].setAttribute('width','16');
+    els[i].setAttribute('height','16');
+}
     </script>
   </body>
 </html>
