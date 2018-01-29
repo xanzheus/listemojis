@@ -360,7 +360,9 @@ var twemoji = (function (
       alt,
       icon,
       variant,
-      src;
+      src,
+      width,
+      height;
     while (length--) {
       modified = false;
       fragment = document.createDocumentFragment();
@@ -388,8 +390,6 @@ var twemoji = (function (
             img = new Image();
             img.onerror = options.onerror;
             img.setAttribute('draggable', 'false');
-            img.setAttribute('width', '16');
-            img.setAttribute('height', '16');
             attrib = options.attributes(icon, variant);
             for (attrname in attrib) {
               if (
@@ -404,6 +404,8 @@ var twemoji = (function (
             img.className = options.className;
             img.alt = alt;
             img.src = src;
+            img.height = 16;
+            img.width = 16;
             modified = true;
             fragment.appendChild(img);
           }
