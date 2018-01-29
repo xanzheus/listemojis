@@ -26,7 +26,7 @@
       vertical-align: -0.1em;
     }
     </style>
-    <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+    <script src="https://cdn.rawgit.com/KompiAjaib/list-emoji/master/emoji.js"></script>
   </head>
   <body>
     <ul class="emoji-list">
@@ -911,24 +911,6 @@
     var elapsed = +new Date;
     twemoji.parse(ul, {"size":16});
     elapsed = (+new Date) - elapsed;
-    document.body.insertBefore(
-      document.createTextNode(total + ' emoji parsed in ' + elapsed + 'ms'),
-      document.body.firstChild
-    );
-    (function (img, metaKey, i) {
-      function copyToClipboard(e) {
-        prompt('Copy to clipboard via ' + metaKey + '+C and Enter', this.alt);
-      }
-      for (i = 0; i < img.length; img[i++].onclick = copyToClipboard) {}
-    }(
-      document.getElementsByTagName('img'),
-      /\b(?:Mac |i)OS\b/i.test(navigator.userAgent) ? 'Command' : 'Ctrl'
-    ));
-      var els = document.getElementsByTagName('img');
-for (var i=0; i < els.length; i++) {
-    els[i].setAttribute('width','16');
-    els[i].setAttribute('height','16');
-}
     </script>
   </body>
 </html>
